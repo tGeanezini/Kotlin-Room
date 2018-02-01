@@ -9,7 +9,6 @@ public class Person {
     @PrimaryKey(autoGenerate = true)
     public int id;
 
-    //Teste
     public String firstName;
     public String lastName;
     public int age;
