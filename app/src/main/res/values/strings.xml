@@ -9,4 +9,6 @@
     <string name="btn_cancelar">Cancelar</string>
     <string name="btn_salvar">Salvar</string>
     <string name="btn_excluir">Excluir</string>
+    <string name="btn_add_contact">Add contact</string>
+    <string name="label_contacts">Contacts</string>
 </resources>

@@ -13,6 +13,10 @@ public class DatabaseInitializer {
         db.personDAO().insertPerson(person);
     }
 
+    public static void updatePerson(@NonNull final AppDatabase db, Person person) {
+        db.personDAO().updatePerson(person);
+    }
+
     public static void removePerson(@NonNull final AppDatabase db, Person person) {
         db.personDAO().deletePerson(person);
     }

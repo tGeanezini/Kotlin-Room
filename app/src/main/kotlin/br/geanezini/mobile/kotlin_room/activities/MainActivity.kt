@@ -1,6 +1,7 @@
 package br.geanezini.mobile.kotlin_room.activities
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -28,7 +29,8 @@ class MainActivity : AppCompatActivity() {
         var personAdapter = PersonAdapter(this, personList)
         list_contacts.adapter = personAdapter
         list_contacts.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, position, id ->
-            startActivity<DetailActivity>("person" to list_contacts.getItemAtPosition(position))
+            //startActivity<DetailActivity>("person" to Person.toBundle(personList[position]))
+            startActivity<DetailActivity>("id" to personList[position].getId())
         }
 
         btn_add_person.setOnClickListener { startActivity<DetailActivity>() }
@@ -56,6 +58,9 @@ class MainActivity : AppCompatActivity() {
                 view = convertView
                 vh = view.tag as ViewHolder
             }
+
+            vh.textPersonSurname.text = personList[position].lastName
+            vh.textFirstName.text = personList[position].firstName
 
             return view
         }
